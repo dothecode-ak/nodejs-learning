@@ -1,0 +1,19 @@
+{
+    "name": "nodejs-step-by-step",
+    "version": "1.0.0",
+    "description": "",
+    "main": "readfile.js",
+    "scripts": {
+        "start": "node readfile.js"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "express": "^4.17.1",
+        "fs": "0.0.1-security",
+        "mysql": "^2.18.1",
+        "nodemailer": "^6.7.0",
+        "upper-case": "^2.0.2"
+    }
+}
