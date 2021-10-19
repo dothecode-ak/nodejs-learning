@@ -22,7 +22,7 @@ res.render('profile',{name:req.params.name,data:data})
 });
 router.get('/signup',checkUrl,(req,res)=>
 {
-    res.send('Sign up page')
+    res.render('signup')
 })
 app.use('/',router)
 app.listen(3000,()=>

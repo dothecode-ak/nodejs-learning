@@ -7,7 +7,7 @@ const transport=nm.createTransport({
     requireTLS:true,
     auth:{
         user:'anil.k@alivenow.in',
-        pass:'ShilpiAnil21@'
+        pass:''
     }
 })
 

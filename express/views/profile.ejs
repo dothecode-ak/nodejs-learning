@@ -12,27 +12,28 @@
 </head>
 
 <body>
-    <h1>Name
-        <%= name %>
-    </h1>
-    <h2>Email:
-        <%= data.email %>
-    </h2>
-    <h2>Age:
-        <%= data.age %>
-    </h2>
-    <h3>
-        Skills:
-        <ul>
-            <% data.skills.forEach(function(skill)   { %>
+    <%- include('layout/nav.ejs') -%>
+        <h1>Name
+            <%= name %>
+        </h1>
+        <h2>Email:
+            <%= data.email %>
+        </h2>
+        <h2>Age:
+            <%= data.age %>
+        </h2>
+        <h3>
+            Skills:
+            <ul>
+                <% data.skills.forEach(function(skill)   { %>
 
-                <li>
-                    <%=skill%>
-                </li>
-                <% }) %>
+                    <li>
+                        <%=skill%>
+                    </li>
+                    <% }) %>
 
-        </ul>
-    </h3>
+            </ul>
+        </h3>
 </body>
 
 </html>
