@@ -1,10 +1,14 @@
 
 const express=require('express');
 const ejs=require('ejs');
+const bodyParser=require('body-parser');
+var bpencoder=bodyParser.urlencoded();
 var app=express();
+app.use('/assets',express.static('assets'))
 app.set('view engine','ejs')
 var router =express.Router();
-const checkUrl =require('./middleware')
+const checkUrl =require('./middleware');
+const { log } = require('console');
 app.get('/',(req,res)=>
 {
 res.render('home')
@@ -23,6 +27,12 @@ res.render('profile',{name:req.params.name,data:data})
 router.get('/signup',checkUrl,(req,res)=>
 {
     res.render('signup')
+})
+
+app.post('/signup',bpencoder,(req,res)=>
+{
+console.log(req.body);
+res.render('signup');
 })
 app.use('/',router)
 app.listen(3000,()=>

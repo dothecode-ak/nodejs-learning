@@ -10,7 +10,12 @@
 
 <body>
     <%- include('layout/nav.ejs') -%>
-        <h1>Signup page</h1>
+        <h1>User signup</h1>
+        <form action="/signup" method="post">
+            Name: <input type="text" name="name"> <br> Email: <input type="email" name="email"> <br> Mobile: <input type="text" name="mobile"> <br>
+            <br>
+            <input type="submit" value="signup">
+        </form>
 </body>
 
 </html>
